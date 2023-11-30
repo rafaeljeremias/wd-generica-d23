@@ -12,9 +12,7 @@ object CondicaoForm: TCondicaoForm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -70,7 +68,6 @@ object CondicaoForm: TCondicaoForm
     Width = 77
     Height = 36
     Caption = 'OK'
-    DoubleBuffered = True
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C0060000120B0000120B00000000000000000000FF00FFFF00FF
@@ -129,7 +126,6 @@ object CondicaoForm: TCondicaoForm
       FFFF00FFFF00FF95C9FF75B9FF75B9FF7BBCFF7BBCFF6DB5FF58ABFF44A1FF2D
       95FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
     ModalResult = 1
-    ParentDoubleBuffered = False
     TabOrder = 3
     OnClick = OKBitBtnClick
   end
@@ -139,7 +135,6 @@ object CondicaoForm: TCondicaoForm
     Width = 77
     Height = 36
     Caption = 'Cancelar'
-    DoubleBuffered = True
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C0060000120B0000120B00000000000000000000FF00FFFF00FF
@@ -198,7 +193,6 @@ object CondicaoForm: TCondicaoForm
       FFFF00FFFF00FF95C9FF75B9FF75B9FF7BBCFF7BBCFF6DB5FF58ABFF44A1FF2D
       95FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
     ModalResult = 2
-    ParentDoubleBuffered = False
     TabOrder = 4
   end
   object SinalComboBox: TComboBox
@@ -215,6 +209,7 @@ object CondicaoForm: TCondicaoForm
     Width = 185
     Height = 21
     TabOrder = 2
+    Text = ''
     OnKeyDown = ValorEditKeyDown
   end
   object SensitivoCheckBox: TCheckBox

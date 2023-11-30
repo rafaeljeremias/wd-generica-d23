@@ -1,0 +1,42 @@
+unit Util.Constantes;
+
+interface
+
+const
+  STR_SIM_1 = 'S';
+  STR_NAO_1 = 'N';
+  CHAVE = 'boogieman';
+  QUEBRA_LINHA_EMAIL = '<br>';
+  ARQUIVO_INI_SITE = 'site.ini';
+  CHAVE_AUTOMALOG = '4ut0m4l0g';
+  ARQUIVO_INI_TASK = 'task.ini';
+  CHAVE_PATRIMONIO = 'bagacorno';
+  ARQUIVO_INI_PONTO = 'ponto.ini';
+  ARQUIVO_INI_SENIOR = 'senior.ini';
+  ARQUIVO_INI_MERCADO = 'mercado.ini';
+  ARQUIVO_INI_COLETOR = 'coletor.ini';
+  ARQUIVO_INI_AutoSEND = 'autosend.ini';
+  ARQUIVO_INI_PATRIMONIO = 'patrimonio.ini';
+  ARQUIVO_INI_PROMOCIONAL = 'promocional.ini';
+  ARQUIVO_INI_UNIFICADOR = 'unificador.ini';
+  ARQUIVO_INI_AUTOADM = 'autoadm.ini';
+  ARQUIVO_INI_PRICE = 'price2.ini';
+  ARQUIVO_INI_DADOS = 'dados.ini';
+  ARQUIVO_INI_REDIS = 'redis.ini';
+  DS_IDENTIFICADOR_MSPROMO = 'MSPRO';
+  CHAVE_SITE_MANENTTI = 'ManenttiWeb';
+  DIRETORIO_REGISTRO_COBRANCA_RAIZ  = 'REGCOBRA';
+  DIRETORIO_REGISTRO_COBRANCA_REMESSA  = 'REMESSA';
+  DIRETORIO_REGISTRO_COBRANCA_RETORNO  = 'RETORNO';
+  DIRETORIO_REGISTRO_COBRANCA_PROCESSADO = 'PROCESSADO';
+  STR_TAG_REGISTROS = 'REGISTROS';
+  STR_PASS_API_MERCADO = 'TIADMIN10';
+  STR_USER_API_MERCADO = 'M4NENTT14PP';
+  STR_USER_API_CHAMADO = 'm4n3n771';
+  STR_PASS_API_CHAMADO = 'tiadmin10';
+
+implementation
+
+end.
+
+
