@@ -1801,10 +1801,10 @@ begin
       erro := 'Chave de Nfe inválida: Data de emissão não corresponde a chave NFe!';
       exit;
     end;
-    if (cnpj <> Copy(nr_chave,7,14)) and (StrToInt(Copy(nr_chave,23,3)) < 890) then
+    if (cnpj <> Copy(nr_chave,7,14))and(cnpj <> Copy(nr_chave,10,11))and(StrToInt(Copy(nr_chave,23,3)) < 890) then
     begin
       result := false;
-      erro := 'Chave de Nfe inválida: CNPJ não corresponde a chave NFe!';
+      erro := 'Chave de Nfe inválida: CNPJ/CPF não corresponde a chave NFe!';
       exit;
     end;
     if alinhaDir(modelo,2,'0') <> Copy(nr_chave,21,2) then
