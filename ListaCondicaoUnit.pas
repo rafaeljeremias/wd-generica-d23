@@ -34,18 +34,26 @@ uses
 {$R *.dfm}
 
 procedure TListaCondicaoForm.AdicionaBitBtnClick(Sender: TObject);
+var
+  LValorFiltro: string;
 begin
   Try
     CondicaoForm := TCondicaoForm.Create(self);
     CondicaoForm.CarregaFields(TConsultaSimplesGenericaForm(Owner).CDSQy.Fields);
     CondiCaoForm.ShowModal;
+    
     if CondicaoForm.ModalResult = mrOk then
     begin
-      TConsultaSimplesGenericaForm(Owner).InserirFiltro := True;
-      TConsultaSimplesGenericaForm(Owner).FiltroCDS.Append;
-      TConsultaSimplesGenericaForm(Owner).FiltroCDSds_condicao.AsString := CondicaoForm.GetCondicao;
-      TConsultaSimplesGenericaForm(Owner).FiltroCDSds_mostra.AsString   := CondicaoForm.GetMostra;
-      TConsultaSimplesGenericaForm(Owner).FiltroCDS.Post;
+      LValorFiltro := CondicaoForm.GetMostra;
+
+      if Trim(LValorFiltro) <> '' then
+      begin
+        TConsultaSimplesGenericaForm(Owner).InserirFiltro := True;
+        TConsultaSimplesGenericaForm(Owner).FiltroCDS.Append;
+        TConsultaSimplesGenericaForm(Owner).FiltroCDSds_condicao.AsString := CondicaoForm.GetCondicao;
+        TConsultaSimplesGenericaForm(Owner).FiltroCDSds_mostra.AsString := LValorFiltro;
+        TConsultaSimplesGenericaForm(Owner).FiltroCDS.Post;
+      end;
     end;
   finally
     CondicaoForm.Free;
@@ -60,7 +68,7 @@ end;
 
 procedure TListaCondicaoForm.RemoveBitBtnClick(Sender: TObject);
 begin
-  if msgConfirma('Excluir condição?') then
+  if msgConfirma('Excluir condiÃ§Ã£o?') then
     TConsultaSimplesGenericaForm(Owner).FiltroCDS.Delete;
 end;
 
